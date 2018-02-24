@@ -17,4 +17,7 @@
   <mat-error class="error" *ngIf="userDetailsForm.get('password').touched && userDetailsForm.get('password').hasError('minlength')">
     Minimum 5 Characters
   </mat-error>
+  <button [disabled]="!userDetailsForm.valid" mat-button [ngClass]="{disabled : !userDetailsForm.valid}" class="link" (click)="saveEntity()">
+     save
+  </button>
 </form>
